@@ -1,0 +1,13 @@
+BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE STRICTLY ADHERED TO THE TENURES OF THE OHIO STATE UNIVERSITY’S ACADEMIC INTEGRITY POLICY WITH RESPECT TO THIS ASSIGNMENT.
+
+THIS IS THE README FILE FOR LAB 2.
+
+Student name: Mayank Karnati
+
+1. I spent a total of 6 hours to complete the entire lab.
+
+2. A challenge that I encountered with this lab was regarding creating the key. I initially struggled with how to get started given the constraints. After a while, I figured that I would start by building a 4 bit key, so I used an OR operation with the value I read in, and then left shifted by 1. Then, I struggled with turning it into an 8 bit key. After a few tries, I realized that I could record the bit in the key in 2 different spots by using 0x11 as my mask rather than 1.
+
+3. In the create_key function, the key is stored in the variable "result". Therefore, I used the command "disp /x result" to print the interim values of the key. In this example, the 4 bit value I inputted was 1011. After processing the first digit ('1'), the value of the key was 0x11. After processing the second digit, it was 0x22. After the third digit, it was 0x55. After the 4th digit, it was 0xbb. In order to check if this was valid, I converted each hex value into binary. Therefore the value of the key is 0001 0001, 0010 0010, 0101 0101, and 1011 1011, in order after each digit was processed. 
+
+4. I did not run gdb on but_encode 2 since it did not present any errors, and it worked as expected. 

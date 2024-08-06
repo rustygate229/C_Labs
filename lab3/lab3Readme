@@ -1,0 +1,19 @@
+BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE STRICTLY ADHERED TO
+THE TENURES OF THE OHIO STATE UNIVERSITY'S ACADEMIC INTEGRITY POLICY
+WITH RESPECT TO THIS ASSIGNMENT
+
+Name: Mayank Karnati
+
+The total amount of time it took me to complete this lab was 8 hours. It also took a considerable amount of effort.
+
+One problem I encountered was with dynamically allocating memory for the quotes and favorites array. I declared the arrays
+within main(); however, I chose to allocate memory for them within a function. Initially, I passed the pointer in as a
+parameter, and allocated memory to that pointer within the function. However, I would seg fault when I tried to access it outside. After a few iterations, I read that to minimize undefined behavior, I should initialize and allocate memory within
+the function, and return the pointer. After implementing that strategy, the code worked. 
+
+One bug that I had found using gdb was while inputting the quotes from stdin. For some reason, the program let me input one
+less quote than the number I entered. To debug this, I ran gdb and set the breakpoint at the input_quote() function using
+"break input_quote". Then, I printed out the values of variable x, which holds the getchar() value, using 
+"print /c x". The first value that was printed out was the newline character '\n'. I figured that it must have been an input buffer, so I cleared it by using getchar() to discard that value.
+
+

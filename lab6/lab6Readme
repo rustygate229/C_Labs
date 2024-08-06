@@ -1,0 +1,24 @@
+BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE STRICTLY
+ADHERED TO THE TENURES OF THE OHIO STATE UNIVERSITY'S ACADEMIC
+INTEGRITY POLICY.
+THIS IS THE README FILE FOR LAB 6.
+
+Name: Mayank Karnati
+
+It took me about 5 hours and a considerable amount of effort to complete this lab.
+
+I thought that this lab wasn't that challenging by itself given all the slides and notes.
+The lectures were extremely helpful to have while completing this lab. My biggest problems
+were figuring out the syntax errors as sometimes the errors messages were not very helpful.
+Other than that, the lab was very interesting.
+
+I did not use gdb with my C program from lab2 or the C program file given for that lab. I mainly
+used gdb to find bugs in my x86-64 programs. 
+
+One of main bugs I encountered was with the getchar function in create_key. I kept generating the wrong
+key, so I set a breakpoint at create_key and I watched the %rax register for the return value of getchar. The first 
+getchar value returned 0x0a which was the newline character. This is when I figured
+out that the newline char must be cleared from the input stream. 
+
+I didn't necessarily have to jump between the C and x86-64 language programs to find bugs. I used my
+C program as a reference to guide my x86-64 code. All of my bugs came from syntax errors and not logic errors.

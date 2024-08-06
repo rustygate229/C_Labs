@@ -1,0 +1,19 @@
+BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE STRICTLY ADHERED TO 
+THE TENURES OF THE OHIO STATE UNIVERSITY'S ACADEMIC INTEGRITY POLICY WITH RESPECT
+TO THIS ASSIGNMENT.
+
+Name: Mayank Karnati
+
+It took 10 hours to complete this lab, and it took quite a bit of effort.
+
+I thought that this lab was a lot more challenging than any of the previous ones, 
+and it took quite a bit of looking through notes to complete.
+
+One bug I fixed with the help of gdb was with compute. For some reason, my code
+was seg faulting, so I took to gdb. I set a breakpoint at compute, and as I was 
+running through the code, I realized that my loop was running an extra time. 
+Since at the end of the loop the address to the struct is increased by 40 bytes
+to get to the next, it was trying to access a struct that doesn't exist.
+I realized that I reused %rsi while diving, and %rsi contained the count variable 
+which dictated how many times the loop ran. By using a different register, I was able
+to fix the bug.

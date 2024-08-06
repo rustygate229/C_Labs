@@ -1,0 +1,18 @@
+BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I STRICTLY ADHERED TO THE TENURES OF THE 
+OHIO STATE UNIVERSITY'S ACADEMIC INTEGRITY POLICY.
+
+THIS IS THE README FILE FOR LAB 4.
+
+Name: Mayank Karnati
+
+It took me about 10 hours of time, and a high amount of effort to complete this lab.
+
+This lab took a long time, and my biggest concern was with the parameters. I had trouble deciding
+when I wanted to pass in the pointer itself, or a pointer to a pointer. Sometimes, I forgot that I was 
+trying to edit the value of the pointer, and I would pass in the pointer itself which would pass in a copy of the 
+pointer. This caused a lot of errors later on.
+
+There was a bug within my program when the user tried to add in a quote. Intially, the quote would not even be added. 
+I used gdb main, and then set a breakpoint at gdb insert_quote within execute_option function. I printed the value of 
+list_head and &list_head. This wasn't matching up with the value of &list_head in the main function. That is when I realized that I
+was trying to edit the value of list_head within the function, but I was passing in list_head and not a pointer to list_head.
